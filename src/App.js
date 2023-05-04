@@ -2,16 +2,14 @@
 //https://spotify-inspired-pages.web.app
 //https://www.lifeatspotify.com/
 
-import './App.css';
-import { useScroll, useTransform, useInView } from "framer-motion"
+
+import { useInView } from "framer-motion"
 import { useRef, useEffect } from 'react';
 
-function App() {
+const App = () => {
 
 
 
-  let { scrollYProgress } = useScroll();
-  let yscroll = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
   const ref = useRef(null)
   const pink = useRef(null)
 
@@ -19,29 +17,21 @@ function App() {
   const isPinkInView = useInView(pink)
 
 
-  useEffect(() => {
-    console.log("Element is in view: ", isInView, isPinkInView)
-  }, [isInView, isPinkInView])
-
   return (
     <>
      
-
-
       <div className="bg-gradient-to-r from-[#ff4632] to-[#fd633d] sticky top-0 min-h-screen overflow-hidden  items-center flex justify-center overflow-x-auto">
         <div className='text-8xl font-bold text-white'>
           Join the band
           </div>
       </div>
-
-
       
        
       <div id="who-are-we"></div> 
       <div className="bg-white min-h-screen flex sticky top-0 border border-[#1010181f] rounded-t-3xl">
         
         <a href='#who-are-we' className='w-full absolute'>
-          <div className='text-3xl whitespace-nowrap pl-20 h-fit p-10 text-left text-black hover:opacity-60'>
+          <div className='text-3xl whitespace-nowrap pl-20 h-fit p-10 text-left text-black hover:opacity-70 ease-in-out transition duration-500'>
             Who are we
           </div>
         </a>
@@ -58,7 +48,7 @@ function App() {
       <div id="where-we-belong"></div> 
       <div className='bg-white min-h-screen w-full flex sticky top-[120px] border border-[#1010181f]  rounded-t-3xl'>
         <a href='#where-we-belong' className='w-full absolute'>
-          <div className='text-3xl whitespace-nowrap pl-20 h-fit p-10 text-left text-black hover:opacity-60'>
+          <div className='text-3xl whitespace-nowrap pl-20 h-fit p-10 text-left text-black hover:opacity-70 ease-in-out transition duration-500'>
               Where we belong
           </div>
         </a>
@@ -76,7 +66,7 @@ function App() {
       <div className={`min-h-screen relative top-[120px] border border-[#1010181f]  transition-all ease-in-out duration-500  ${isInView == true ? 'bg-[#2d46b9] ' : 'bg-white  rounded-t-3xl' }`}>
         
       <a href='#how-we-act' className='w-full absolute'>
-          <div className='text-3xl whitespace-nowrap pl-20 h-fit p-10 text-left text-black hover:opacity-60'>
+          <div className='text-3xl whitespace-nowrap pl-20 h-fit p-10 text-left text-black hover:opacity-70 ease-in-out transition duration-500'>
               How we act
           </div>
         </a>
