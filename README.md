@@ -2,7 +2,7 @@
 <html>
 
 <body>
-	<h1>iOS Side Navigation</h1>
+	<h1>Spotify Inspired Pages</h1>
     <h2><a href="https://spotify-inspired-pages.web.app">Try here</a></h2>
 	<p>A React App inspired by the <a href="https://www.lifeatspotify.com/">Spotify Jobs Page</a>. Using Tailwind for CSS & Framer Motion's useInView function. The idea is to replicat the Spotify pages overlapping and the background color transitions</p>
 
