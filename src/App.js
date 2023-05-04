@@ -1,6 +1,9 @@
-import logo from './logo.svg';
+//https://github.com/48Stephen/Spotify-Insiperd-Pages
+//https://spotify-inspired-pages.web.app
+//https://www.lifeatspotify.com/
+
 import './App.css';
-import { useScroll, motion, useTransform, useInView, inView } from "framer-motion"
+import { useScroll, useTransform, useInView } from "framer-motion"
 import { useRef, useEffect } from 'react';
 
 function App() {
@@ -10,16 +13,23 @@ function App() {
   let { scrollYProgress } = useScroll();
   let yscroll = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
   const ref = useRef(null)
+  const pink = useRef(null)
+
   const isInView = useInView(ref)
+  const isPinkInView = useInView(pink)
+
+
   useEffect(() => {
-    console.log("Element is in view: ", isInView)
-  }, [isInView])
+    console.log("Element is in view: ", isInView, isPinkInView)
+  }, [isInView, isPinkInView])
 
   return (
     <>
-      {/*  */}
-      <div className="bg-gradient-to-r from-[#ff4632] to-[#fd633d] sticky top-0 h-screen overflow-hidden  items-center flex justify-center overflow-x-auto">
-        <div className='text-5xl text-white'>
+     
+
+
+      <div className="bg-gradient-to-r from-[#ff4632] to-[#fd633d] sticky top-0 min-h-screen overflow-hidden  items-center flex justify-center overflow-x-auto">
+        <div className='text-8xl font-bold text-white'>
           Join the band
           </div>
       </div>
@@ -27,56 +37,88 @@ function App() {
 
       
        
-           <div id="who-are-we"></div>
+      <div id="who-are-we"></div> 
+      <div className="bg-white min-h-screen flex sticky top-0 border border-[#1010181f] rounded-t-3xl">
         
-          <div className="bg-white h-screen sticky top-0  border border-[#1010181f] rounded-t-3xl">
-            <a href='#who-are-we'>
-            <div className='text-5xl pl-20 p-10 text-left text-black'>
-              Who are we
-            </div>
-            </a>
+        <a href='#who-are-we' className='w-full absolute'>
+          <div className='text-3xl whitespace-nowrap pl-20 h-fit p-10 text-left text-black hover:opacity-60'>
+            Who are we
           </div>
+        </a>
         
+        <div className='flex w-full justify-center items-center'>
+          <div className={`text-5xl`}>
+          One band, no solo artists
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <div id="where-we-belong"></div> 
+      <div className='bg-white min-h-screen w-full flex sticky top-[120px] border border-[#1010181f]  rounded-t-3xl'>
+        <a href='#where-we-belong' className='w-full absolute'>
+          <div className='text-3xl whitespace-nowrap pl-20 h-fit p-10 text-left text-black hover:opacity-60'>
+              Where we belong
+          </div>
+        </a>
+        <div className='flex w-full justify-center items-center'>
+          <div className={`text-5xl`}>
+          Listening and learning
+          </div>
+        </div>
+      </div>
+    
+
 
         
-         <div id="where-we-are"></div> 
+      <div id="how-we-act"></div> 
+      <div className={`min-h-screen relative top-[120px] border border-[#1010181f]  transition-all ease-in-out duration-500  ${isInView == true ? 'bg-[#2d46b9] ' : 'bg-white  rounded-t-3xl' }`}>
+        
+      <a href='#how-we-act' className='w-full absolute'>
+          <div className='text-3xl whitespace-nowrap pl-20 h-fit p-10 text-left text-black hover:opacity-60'>
+              How we act
+          </div>
+        </a>
+      
+      </div>
     
+      <div className={`grid grid-cols-1 w-full min-h-screen absolute rounded-t-3xl justify-center transition-all ease-in-out duration-500 ${isInView == true ? 'bg-[#2d46b9] border-white text-white' : 'bg-white border-[#1010181f] text-black' }`}>
+    
+        <div className={`text-5xl flex transition-all self-center ease-in-out duration-500 justify-self-center mb-40`}>
+          Featured Jobs
+        </div>
+        
+        <div className='w-full justify-evenly self-center flex '>
+            <div ref={ref}></div>
+        </div>
+
+  
+        <div className={`grid grid-cols-1 w-full justify-center min-h-screen transition-all ease-in-out duration-500  ${isInView == true ? 'bg-[#2d46b9] text-white' : 'bg-white text-black'}`}>
+        
+          <div className={"text-5xl text-center flex self-center justify-self-center"}>
+            Here, there, everywhere
+          </div>
+    
+        </div>
+
+
+        <div className={`grid grid-cols-1 w-full justify-center text-black min-h-screen transition-all ease-in-out duration-500 ${isPinkInView == true ? 'bg-[#ffcdd2]' : 'bg-white' }`}>
+        
+          <div className={"text-5xl text-center flex self-center justify-self-center transition-all ease-in-out duration-500 "}>
+            Fresh Content
+          </div>
+
+          <div className='w-full justify-evenly self-center'>
+            <div ref={pink} ></div>
+          </div>
+        
+    
+        </div>
+      
+      </div>
           
-          <div className='bg-white h-screen sticky top-[128px] border border-[#1010181f]  rounded-t-3xl'>
-            <a href='#where-we-are'>
-            <div className='text-5xl pl-20 p-10 text-left text-black'>
-              Where we are
-            </div>
-            </a>
-          </div>
-    
-
-
-        
-        
-          <div className='bg-white h-screen relative top-[236px] border border-[#1010181f]  rounded-t-3xl'>
-            <a href='#where-we-are'>
-            <div className='text-5xl pl-20 p-10 text-left text-black'>
-              Where we are
-            </div>
-            </a>
-          </div>
-    
-          <div className={` h-screen absolute border flex  rounded-t-3xl flex-col justify-center ${isInView == true ? 'bg-blue-500 border-white text-white' : 'bg-white border-[#1010181f] text-black' }`}>
-           
-            <div className={`text-5xl p-10 flex self-center justify-self-start`}>
-              Featured Jobs
-            </div>
-            
-            <div ref={ref} className='self-center'>
-                <div className='w-40 h-40 border border-white'>
-
-                </div>
-            </div>
           
-          </div>
-
-
     
   
     </>
@@ -84,11 +126,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
