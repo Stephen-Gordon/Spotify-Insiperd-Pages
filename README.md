@@ -15,9 +15,8 @@
 - LinkedIn: [Stephen Gordon](https://www.linkedin.com/in/ste-gordon/)
 - [Portfolio](https://www.stephengordon.ie)
 
- <video width="400" controls>
-  <source src="Spotify.mov" type="video/mp4">
-</video> 
+## Demo
+![]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/Stephen-Gordon/Spotify-Insiperd-Pages/blob/main/Spotify.gif))
 
 <h2>Setup</h2>
 <ol>
