@@ -16,7 +16,8 @@
 - [Portfolio](https://www.stephengordon.ie)
 
 ## Demo
-![]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/Stephen-Gordon/Spotify-Insiperd-Pages/blob/main/Spotify.gif))
+![Gif](Spotify.gif)
+![Gif]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/Stephen-Gordon/Spotify-Insiperd-Pages/blob/main/Spotify.gif))
 
 <h2>Setup</h2>
 <ol>
