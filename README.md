@@ -20,7 +20,7 @@
 
 <h2>Setup</h2>
 <ol>
-	<li>Clone the repository: <code>git clone https://github.com/48Stephen/Spotify-Insiperd-Pages.git</code></li>
+	<li>Clone the repository: <code>git clone https://github.com/Stephen-Gordon/Spotify-Insiperd-Pages.git</code></li>
 	<li>Install dependencies: <code>npm install</code></li>
 	<li>Start the development server: <code>npm start</code></li>
 	<li>Open the app in your browser at <code>http://localhost:3000</code></li>
