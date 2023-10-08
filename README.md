@@ -16,7 +16,7 @@
 - [Portfolio](https://www.stephengordon.ie)
 
  <video width="400" controls>
-  <source src="./Spotify.mov" type="video/mp4">
+  <source src="Spotify.mov" type="video/mp4">
 </video> 
 
 <h2>Setup</h2>
